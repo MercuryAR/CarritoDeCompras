@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"></div>
+        <div class="header__nombre">DeporShop</div>
+        <div class="header__social-icons">
+            <img src="./img/Facebook.svg" alt="Enlace a Facebook">
+            <img src="./img/Instagram.svg" alt="Enlace a Instagram">
+            <img src="./img/X.svg" alt="Enlace a Twitter">
+        </div>
+    </header>
+    <section class="titulos">
+        <nav class="menu">
+            <button onclick="location.href='index.html'">Inicio</button>
+            <button onclick="location.href='productos.html'">Productos</button>
+            <button onclick="location.href='contacto.html'">Contacto</button>
+        </nav>
+        <div class="login">
+            <img src="./img/Usuario.svg" alt="Icono de usuario">
+        </div>
+        <div class="carrito" id="carrito" onclick="finalizarCompra()">
+            <img src="./img/Carrito.png" alt="Carrito de compras">
+        </div>
+        <div>
+            <p id="precioTotal">Total: $0</p>
+        </div>
+    </section>
+    
+    <main class="productos">
+        <aside class="categorias-lateral">
+            <h2>Categorías</h2>
+            <ul>
+                <li><button>Calzado Masculino</button></li>
+                <li><button>Calzado Femenino</button></li>
+                <li><button>Indumentaria Masculina</button></li>
+                <li><button>Indumentaria Femenina</button></li>
+                <li><button>Accesorios</button></li>
+            </ul>
+        </aside>
+        <section class="productos-grid">
+            <!-- Generar 5x4 productos -->
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre1.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Deportivo Azul</h3>
+                <p>Precio: $1200</p>
+                <label for="cantidad1">Cantidad:</label>
+                <input type="number" id="cantidad1" name="cantidad1" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Deportivo Azul',1200)">Comprar</button>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre2.jpeg" alt="Calzado Masculino Deportivo Blanco">
+                <h3>Calzado Masculino Deportivo Blanco</h3>
+                <p>Precio: $1300</p>
+                <label for="cantidad2">Cantidad:</label>
+                <input type="number" id="cantidad2" name="cantidad2" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Deportivo Blanco',1300)">Comprar</button>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre3.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Especial Rojo</h3>
+                <p>Precio: $800</p>
+                <label for="cantidad3">Cantidad:</label>
+                <input type="number" id="cantidad3" name="cantidad3" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Especial Rojo',800)">Comprar</button>
+            </div>
+            <!-- Producto 4 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre4.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Especial Verde</h3>
+                <p>Precio: $950</p>
+                <label for="cantidad4">Cantidad:</label>
+                <input type="number" id="cantidad4" name="cantidad4" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Especial Verde',950)">Comprar</button>
+            </div>
+            <!-- Producto 5 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre5.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Casual Amarillo</h3>
+                <p>Precio: $300</p>
+                <label for="cantidad5">Cantidad:</label>
+                <input type="number" id="cantidad5" name="cantidad5" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Casual Amarillo',300)">Comprar</button>
+            </div>
+            <!-- Producto 6 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre6.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Casual Marron</h3>
+                <p>Precio: $300</p>
+                <label for="cantidad6">Cantidad:</label>
+                <input type="number" id="cantidad5" name="cantidad5" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Casual Marron',300)">Comprar</button>
+            </div>
+            <!-- Producto 7 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre7.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Moderno Negro</h3>
+                <p>Precio: $300</p>
+                <label for="cantidad7">Cantidad:</label>
+                <input type="number" id="cantidad5" name="cantidad5" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Moderno Negro',300)">Comprar</button>
+            </div>
+            <!-- Producto 8 -->
+            <div class="producto">
+                <img src="./img/zapatillahombre8.jpeg" alt="Calzado Masculino">
+                <h3>Calzado Masculino Moderno Gris</h3>
+                <p>Precio: $300</p>
+                <label for="cantidad8">Cantidad:</label>
+                <input type="number" id="cantidad5" name="cantidad5" min="1" max="10">
+                <button class="comprar" onclick="agregarProducto('Calzado Masculino Moderno Gris',300)">Comprar</button>
+            </div>
+            <!-- Repetir los productos para completar la cuadricula de 5x4 -->
+        </section>
+        <script src="js/carrito.js"></script>
+    </main>
+    <footer class="footer">
+        <p><strong>&copy; 2024 Todos los derechos reservados. DeporShop, Buenos Aires, Argentina.</strong></p>
+        <nav class="footer-links">
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a>
+        </nav>
+    </footer>  
+</body>
+</html>

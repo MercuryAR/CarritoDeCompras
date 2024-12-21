@@ -1,0 +1,262 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, #004080, #00bfff);
+}
+
+.header__logo,
+.header__nombre,
+.header__social-icons {
+    flex: 1;
+}
+
+.header__nombre {
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.header__social-icons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.header__social-icons img {
+    width: 30px;
+}
+
+/* Menu and Titles Section */
+.titulos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #00bfff;
+}
+
+.menu {
+    display: flex;
+    width: 90%;
+    gap: 15px;
+}
+
+.menu button {
+    padding: 5px 15px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu button:hover {
+    background-color: #e0e0e0;
+}
+
+.login {
+    display: flex;
+    align-items: flex-end;
+    width: 5%;
+}
+
+.carrito {
+    display: flex;
+    align-items: center;
+    width: 5%;
+    cursor: pointer;
+}
+
+.login img, .carrito img {
+    width: 25px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    min-height: 450px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+}
+
+.carousel-images img {
+    width: 70%;;
+    display: none; /* Todas las imágenes están ocultas inicialmente */
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #004080;
+    color: white;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #00bfff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el menu lateral de categorías */
+.categorias-lateral {
+    width: 20%;
+    padding: 20px;
+    background-color: #f0f0f0;
+    position: absolute;
+    height: 60%;
+    top: 70px;
+    left: 10px;
+    margin-top: 120px;
+}
+
+.categorias-lateral h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.categorias-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.categorias-lateral ul li {
+    margin-bottom: 10px;
+}
+
+.categorias-lateral button {
+    width: 100%;
+    padding: 10px;
+    background-color: #00bfff;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.categorias-lateral button:hover {
+    background-color: #0077aa;
+}
+
+/* Estilos para la sección de productos */
+.productos {
+    margin-left: 25%;
+    padding: 20px;
+}
+
+/* Estilos para la cuadrícula de productos */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-height: 600px; 
+    overflow-y: auto; 
+    padding-right: 10px; 
+}
+
+.producto {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.producto h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.producto input[type="number"] {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.comprar {
+    padding: 3px;
+    margin-top: 6px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.comprar:hover {
+    background-color: #0077aa;
+}
+
+.formulario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: center;
+}
+.formulario-grid label {
+    text-align: right;
+    padding-right: 15px;
+}
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+iframe {
+    margin-bottom: 20px;
+}
+.formulario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+.formulario-grid button {
+    grid-column: span 2;
+    justify-self: center;
+}

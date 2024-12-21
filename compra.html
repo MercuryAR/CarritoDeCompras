@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"></div>
+        <div class="header__nombre">DeporShop</div>
+        <div class="header__social-icons">
+            <img src="./img/Facebook.svg" alt="Enlace a Facebook">
+            <img src="./img/Instagram.svg" alt="Enlace a Instagram">
+            <img src="./img/X.svg" alt="Enlace a Twitter">
+        </div>
+    </header>
+    <section class="titulos">
+        <nav class="menu">
+            <button onclick="location.href='index.html'">Inicio</button>
+            <button onclick="location.href='productos.html'">Productos</button>
+            <button onclick="location.href='contacto.html'">Contacto</button>
+        </nav>
+        <div class="login">
+            <img src="./img/Usuario.svg" alt="Icono de usuario">
+        </div>
+        <div class="carrito">
+            <img src="./img/Carrito.png" alt="Carrito de compras">
+        </div>
+    </section>
+    <main>
+        <section class="main-content">
+            <div class="contact-container">
+                <form action="https://formspree.io/f/xzzzpvvw" method="POST" class="formulario-grid">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="Nombre" id="nombre" placeholder="Escribe tu nombre">
+                    
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="Apellido" id="apellido" placeholder="Escribe tu apellido">
+                    
+                    <label for="movil">Móvil:</label>
+                    <input type="text" name="Movil" id="movil" placeholder="Escribe tu móvil">
+                    
+                    <label for="correo electronico">Correo Electrónico:</label>
+                    <input type="email" name="Correo Electronico" id="correo electronico" placeholder="Escribe tu email">
+                    
+                    <label for="Detalle de la compra">Detalle de la compra:</label>
+                    <p id="detalleDeLaCompra"></p>
+                    <div></div> <!-- Espacio en blanco para mantener la alineación -->
+                    <button type="submit">Confirmar</button>
+                </form>
+            </div>
+        </section>
+        <script src="js/compra.js"></script>
+    </main>
+    <footer class="footer">
+        <p><strong>&copy; 2024 Todos los derechos reservados. DeporShop, Buenos Aires, Argentina.</strong></p>
+        <nav class="footer-links">
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a>
+        </nav>
+    </footer>  
+</body>
+</html></footer>
+

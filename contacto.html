@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__logo"></div>
+        <div class="header__nombre">DeporShop</div>
+        <div class="header__social-icons">
+            <img src="./img/Facebook.svg" alt="Enlace a Facebook">
+            <img src="./img/Instagram.svg" alt="Enlace a Instagram">
+            <img src="./img/X.svg" alt="Enlace a Twitter">
+        </div>
+    </header>
+    <section class="titulos">
+        <nav class="menu">
+            <button onclick="location.href='index.html'">Inicio</button>
+            <button onclick="location.href='productos.html'">Productos</button>
+            <button onclick="location.href='contacto.html'">Contacto</button>
+        </nav>
+        <div class="login">
+            <img src="./img/Usuario.svg" alt="Icono de usuario">
+        </div>
+        <div class="carrito">
+            <img src="./img/Carrito.png" alt="Carrito de compras">
+        </div>
+    </section>
+    <main>
+        <section class="main-content">
+            <div class="contact-container">
+                <form action="https://formspree.io/f/xovqwnzq" method="POST" class="formulario-grid">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" name="Nombre" id="nombre" placeholder="Escribe tu nombre">
+                    
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" name="Apellido" id="apellido" placeholder="Escribe tu apellido">
+                    
+                    <label for="movil">Móvil:</label>
+                    <input type="text" name="Movil" id="movil" placeholder="Escribe tu móvil">
+                    
+                    <label for="correo electronico">Correo Electrónico:</label>
+                    <input type="email" name="Correo Electronico" id="correo electronico" placeholder="Escribe tu email">
+                    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea name="mensaje" id="mensaje" rows="4" cols="50" placeholder="Escribe tu mensaje"></textarea>
+                    
+                    <div></div> <!-- Espacio en blanco para mantener la alineación -->
+                    <button type="submit">Enviar</button>
+                </form>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5521.957462589165!2d-58.69145985542557!3d-34.61994869696895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbefbab8fac97%3A0xb6ccd39bd3eafda1!2sParque%20Leloir%2C%20B1715%20Villa%20Udaondo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1727729700601!5m2!1ses!2sar" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p><strong>&copy; 2024 Todos los derechos reservados. DeporShop, Buenos Aires, Argentina.</strong></p>
+        <nav class="footer-links">
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos y Condiciones</a>
+        </nav>
+    </footer>  
+</body>
+</html></footer>
+
