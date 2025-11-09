@@ -1,21 +1,89 @@
-let currentIndex = 0;
-const images = document.querySelectorAll(".carousel-images img");
+let currentSlide = 0;
+const slides = document.querySelectorAll('.carousel__slide');
+const indicators = document.querySelectorAll('.indicator');
+const totalSlides = slides.length;
+let autoPlayInterval;
 
+// Inicializar carousel
+function initCarousel() {
+    showSlide(currentSlide);
+    startAutoPlay();
+    
+    // Pausar autoplay al hacer hover
+    const carousel = document.querySelector('.carousel');
+    if (carousel) {
+        carousel.addEventListener('mouseenter', stopAutoPlay);
+        carousel.addEventListener('mouseleave', startAutoPlay);
+    }
+}
+
+// Mostrar slide específico
+function showSlide(index) {
+    const track = document.querySelector('.carousel__track');
+    currentSlide = (index + totalSlides) % totalSlides;
+    
+    track.style.transform = `translateX(-${currentSlide * 100}%)`;
+    
+    // Actualizar indicadores
+    indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === currentSlide);
+    });
+}
+
+// Mover carousel
 function moveCarousel(direction) {
-    images[currentIndex].style.display = "none";
-    currentIndex = (currentIndex + direction + images.length) % images.length;
-    images[currentIndex].style.display = "block";
+    showSlide(currentSlide + direction);
 }
 
-// Mostrar la primera imagen al cargar la página
-images.forEach((img, index) => img.style.display = index === 0 ? "block" : "none");
-
-// Función para mover el carrusel
-function moveCarouselAuto() {
-    images[currentIndex].style.display = "none"; // Ocultar imagen actual
-    currentIndex = (currentIndex + 1) % images.length; // Incrementar índice
-    images[currentIndex].style.display = "block"; // Mostrar siguiente imagen
+// Ir a slide específico
+function goToSlide(index) {
+    showSlide(index);
 }
 
-// Iniciar el movimiento automático cada 3 segundos
-setInterval(moveCarouselAuto, 3000);
+// Auto-play
+function startAutoPlay() {
+    autoPlayInterval = setInterval(() => {
+        moveCarousel(1);
+    }, 5000); // Cambiar cada 5 segundos
+}
+
+function stopAutoPlay() {
+    clearInterval(autoPlayInterval);
+}
+
+// Soporte para touch/swipe en móviles
+let touchStartX = 0;
+let touchEndX = 0;
+
+const carousel = document.querySelector('.carousel');
+
+if (carousel) {
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+}
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            moveCarousel(1); // Swipe left
+        } else {
+            moveCarousel(-1); // Swipe right
+        }
+    }
+}
+
+// Inicializar cuando el DOM esté listo
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+} else {
+    initCarousel();
+}
