@@ -33,19 +33,19 @@
             </nav>
 
             <div class="header__actions">
-                <button class="icon-button" aria-label="Buscar">
+                <button class="icon-button" aria-label="Buscar" onclick="toggleSearch()">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <circle cx="11" cy="11" r="8"/>
                         <path d="m21 21-4.35-4.35"/>
                     </svg>
                 </button>
-                <button class="icon-button" aria-label="Usuario">
+                <a href="usuario.html" class="icon-button" aria-label="Usuario">
                     <img src="./img/Usuario.svg" alt="">
-                </button>
-                <button class="icon-button cart-button" aria-label="Carrito de compras">
+                </a>
+                <a href="carrito.html" class="icon-button cart-button" aria-label="Carrito de compras">
                     <img src="./img/Carrito.png" alt="">
                     <span class="cart-badge">0</span>
-                </button>
+                </a>
             </div>
 
             <div class="header__social">
@@ -209,20 +209,20 @@
                 <div class="footer__section">
                     <h4 class="footer__subtitle">Enlaces Rápidos</h4>
                     <nav class="footer__links">
-                        <a href="#">Sobre Nosotros</a>
-                        <a href="#">Productos</a>
-                        <a href="#">Contacto</a>
-                        <a href="#">Blog</a>
+                        <a href="sobrenosotros.html">Sobre Nosotros</a>
+                        <a href="productos.html">Productos</a>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="blog.html">Blog</a>
                     </nav>
                 </div>
 
                 <div class="footer__section">
                     <h4 class="footer__subtitle">Ayuda</h4>
                     <nav class="footer__links">
-                        <a href="#">Preguntas Frecuentes</a>
-                        <a href="#">Envíos</a>
-                        <a href="#">Devoluciones</a>
-                        <a href="#">Términos y Condiciones</a>
+                        <a href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                        <a href="envios.html">Envíos</a>
+                        <a href="devoluciones.html">Devoluciones</a>
+                        <a href="terminosdeuso.html">Términos y Condiciones</a>
                     </nav>
                 </div>
 
@@ -239,13 +239,26 @@
             <div class="footer__bottom">
                 <p>&copy; 2024 DeporShop. Todos los derechos reservados. Buenos Aires, Argentina.</p>
                 <nav class="footer__legal">
-                    <a href="#">Política de Privacidad</a>
-                    <a href="#">Términos de Uso</a>
+                    <a href="politicadeprivacidad.html">Política de Privacidad</a>
+                    <a href="terminosdeuso.html">Términos de Uso</a>
                 </nav>
             </div>
         </div>
     </footer>
 
     <script src="js/carousel.js"></script>
+    <script src="js/cart.js"></script>
+    <script>
+        // Función de búsqueda simple
+        function toggleSearch() {
+            const searchQuery = prompt('¿Qué producto estás buscando?');
+            if (searchQuery && searchQuery.trim() !== '') {
+                // Guardar búsqueda en sessionStorage para usarla en productos.html
+                sessionStorage.setItem('searchQuery', searchQuery.trim());
+                // Redirigir a la página de productos
+                window.location.href = 'productos.html';
+            }
+        }
+    </script>
 </body>
 </html>

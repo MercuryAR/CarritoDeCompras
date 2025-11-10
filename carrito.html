@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de Compras - DeporShop">
+    <title>Carrito de Compras - DeporShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__brand">
+                <div class="header__logo">
+                    <svg viewBox="0 0 50 50" class="logo-icon">
+                        <circle cx="25" cy="25" r="20" fill="currentColor"/>
+                        <path d="M15 25 L25 35 L40 20" stroke="white" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
+                <h1 class="header__nombre">DeporShop</h1>
+            </div>
+            
+            <nav class="header__nav" aria-label="Navegación principal">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="productos.html" class="nav-link">Productos</a>
+                <a href="contacto.html" class="nav-link">Contacto</a>
+            </nav>
+
+            <div class="header__actions">
+                <button class="icon-button" aria-label="Buscar">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <circle cx="11" cy="11" r="8"/>
+                        <path d="m21 21-4.35-4.35"/>
+                    </svg>
+                </button>
+                <a href="usuario.html" class="icon-button" aria-label="Usuario">
+                    <img src="./img/Usuario.svg" alt="">
+                </a>
+                <a href="carrito.html" class="icon-button cart-button" aria-label="Carrito de compras">
+                    <img src="./img/Carrito.png" alt="">
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+
+            <div class="header__social">
+                <a href="#" aria-label="Facebook" class="social-link">
+                    <img src="./img/Facebook.svg" alt="">
+                </a>
+                <a href="#" aria-label="Instagram" class="social-link">
+                    <img src="./img/Instagram.svg" alt="">
+                </a>
+                <a href="#" aria-label="Twitter" class="social-link">
+                    <img src="./img/X.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="contact-hero">
+            <div class="container">
+                <h2 class="contact-hero__title">Carrito de Compras</h2>
+                <p class="contact-hero__subtitle">Revisa tus productos antes de finalizar la compra</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="container">
+                <!-- Carrito vacío -->
+                <div id="empty-cart">
+                    <div class="cart-empty">
+                        <div class="cart-empty__icon">🛒</div>
+                        <h3 class="section-title">Tu carrito está vacío</h3>
+                        <p class="section-subtitle">¡Descubre nuestros productos y empieza a comprar!</p>
+                        <a href="productos.html" class="btn btn--primary btn--large">Ver Productos</a>
+                    </div>
+                </div>
+
+                <!-- Carrito con productos -->
+                <div id="cart-content">
+                    <div class="contact-grid">
+                        <!-- Lista de productos -->
+                        <div>
+                            <h3 class="section-title">Productos (<span id="cart-items-count">0</span>)</h3>
+                            <div id="cart-items" class="cart-items"></div>
+                            
+                            <div class="cart-actions">
+                                <button onclick="cart.clearCart(); location.reload();" class="btn btn--secondary">
+                                    Vaciar Carrito
+                                </button>
+                                <a href="productos.html" class="btn btn--secondary">
+                                    Seguir Comprando
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Resumen del pedido -->
+                        <div class="contact-form-wrapper">
+                            <h3 class="section-title">Resumen del Pedido</h3>
+                            
+                            <div class="cart-summary">
+                                <div class="cart-summary__row">
+                                    <span>Subtotal (<span id="summary-items">0</span> productos)</span>
+                                    <span id="summary-subtotal">$0</span>
+                                </div>
+                                <div class="cart-summary__row">
+                                    <span>Envío</span>
+                                    <span id="summary-shipping">$0</span>
+                                </div>
+                                <div id="free-shipping-message" class="cart-summary__message">
+                                    🎉 ¡Envío GRATIS por compras superiores a $50,000!
+                                </div>
+                                <div class="cart-summary__row cart-summary__total">
+                                    <span>Total</span>
+                                    <span id="summary-total">$0</span>
+                                </div>
+                            </div>
+
+                            <button onclick="checkout()" class="btn btn--primary btn--large cart-checkout-btn">
+                                Finalizar Compra
+                            </button>
+
+                            <div class="cart-info-cards">
+                                <div class="contact-info-card">
+                                    <div class="contact-info-card__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-info-card__content">
+                                        <h4 class="contact-info-card__title">Compra Segura</h4>
+                                        <p class="contact-info-card__text">Protegemos tus datos</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info-card">
+                                    <div class="contact-info-card__icon">
+                                        <svg viewBox="0 0 24 24" fill="none">
+                                            <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact-info-card__content">
+                                        <h4 class="contact-info-card__title">Pago Fácil</h4>
+                                        <p class="contact-info-card__text">Múltiples métodos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3 class="footer__title">DeporShop</h3>
+                    <p class="footer__text">Tu tienda de confianza en Buenos Aires, Argentina</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook" class="social-link">
+                            <img src="./img/Facebook.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="Instagram" class="social-link">
+                            <img src="./img/Instagram.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="Twitter" class="social-link">
+                            <img src="./img/X.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Enlaces Rápidos</h4>
+                    <nav class="footer__links">
+                        <a href="sobrenosotros.html">Sobre Nosotros</a>
+                        <a href="productos.html">Productos</a>
+                        <a href="contacto.html">Contacto</a>
+                        <a href="blog.html">Blog</a>
+                    </nav>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Ayuda</h4>
+                    <nav class="footer__links">
+                        <a href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                        <a href="envios.html">Envíos</a>
+                        <a href="devoluciones.html">Devoluciones</a>
+                        <a href="terminosdeuso.html">Términos y Condiciones</a>
+                    </nav>
+                </div>
+
+                <div class="footer__section">
+                    <h4 class="footer__subtitle">Newsletter</h4>
+                    <p class="footer__text">Recibe nuestras ofertas</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Tu email" required>
+                        <button type="submit">Suscribir</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2024 DeporShop. Todos los derechos reservados. Buenos Aires, Argentina.</p>
+                <nav class="footer__legal">
+                    <a href="politicadeprivacidad.html">Política de Privacidad</a>
+                    <a href="terminosdeuso.html">Términos de Uso</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script>
+        // Renderizar carrito
+        function renderCart() {
+            const emptyCart = document.getElementById('empty-cart');
+            const cartContent = document.getElementById('cart-content');
+            const cartItemsContainer = document.getElementById('cart-items');
+            
+            if (cart.items.length === 0) {
+                emptyCart.classList.add('active');
+                cartContent.classList.remove('active');
+                return;
+            }
+
+            emptyCart.classList.remove('active');
+            cartContent.classList.add('active');
+
+            // Renderizar items
+            cartItemsContainer.innerHTML = cart.items.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}" class="cart-item__image">
+                    <div class="cart-item__details">
+                        <h4 class="cart-item__name">${item.name}</h4>
+                        <p class="cart-item__category">${item.category}</p>
+                        <p class="cart-item__price">${formatPrice(item.price)}</p>
+                    </div>
+                    <div class="cart-item__quantity">
+                        <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})" class="quantity-btn">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})" class="quantity-btn">+</button>
+                    </div>
+                    <div class="cart-item__subtotal">
+                        ${formatPrice(item.price * item.quantity)}
+                    </div>
+                    <button onclick="removeFromCart(${item.id})" class="cart-item__remove" aria-label="Eliminar">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            `).join('');
+
+            // Actualizar resumen
+            const totalItems = cart.getTotalItems();
+            const subtotal = cart.getSubtotal();
+            const shipping = cart.getShipping();
+            const total = cart.getTotal();
+
+            document.getElementById('cart-items-count').textContent = totalItems;
+            document.getElementById('summary-items').textContent = totalItems;
+            document.getElementById('summary-subtotal').textContent = formatPrice(subtotal);
+            document.getElementById('summary-shipping').textContent = shipping === 0 ? 'GRATIS' : formatPrice(shipping);
+            document.getElementById('summary-total').textContent = formatPrice(total);
+
+            // Mensaje de envío gratis
+            const freeShippingMessage = document.getElementById('free-shipping-message');
+            if (subtotal >= 50000) {
+                freeShippingMessage.classList.add('active');
+            } else {
+                freeShippingMessage.classList.remove('active');
+            }
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            cart.updateQuantity(productId, newQuantity);
+            renderCart();
+        }
+
+        function removeFromCart(productId) {
+            if (confirm('¿Eliminar este producto del carrito?')) {
+                cart.removeItem(productId);
+                renderCart();
+            }
+        }
+
+        function checkout() {
+            if (cart.items.length === 0) {
+                alert('Tu carrito está vacío');
+                return;
+            }
+            
+            alert('¡Funcionalidad de checkout!\n\nEn producción, aquí se procesaría el pago.\nTotal: ' + formatPrice(cart.getTotal()));
+            // En producción: window.location.href = 'checkout.html';
+        }
+
+        // Inicializar
+        renderCart();
+    </script>
+</body>
+</html>
