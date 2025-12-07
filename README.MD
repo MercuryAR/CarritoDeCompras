@@ -1,32 +1,32 @@
 Este proyecto pertenece al curso de FRONT-END JS, Año 2024, Comisión C24225, Alumno Paulo Orsini.
 
-# 🛒 DeporShop - E-commerce de Zapatillas Deportivas
+# DeporShop - E-commerce de Zapatillas Deportivas
 
-## 📋 Descripción del Proyecto
+## Descripción del Proyecto
 
 DeporShop es un sitio web de e-commerce completo especializado en la venta de zapatillas deportivas de las principales marcas del mercado. El proyecto fue desarrollado con un enfoque en UX/UI siguiendo los principios de Design Thinking, ofreciendo una experiencia de usuario moderna, intuitiva y completamente responsive.
 
 **Características principales:**
-- ✅ 13 páginas HTML completamente funcionales
-- ✅ Sistema de carrito de compras con localStorage
-- ✅ Sistema de favoritos persistente
-- ✅ Autenticación de usuarios (login/registro)
-- ✅ Diseño responsive mobile-first
-- ✅ Animaciones y transiciones fluidas
-- ✅ Búsqueda de productos en tiempo real
-- ✅ Validación de formularios con JavaScript
+- 13 páginas HTML completamente funcionales
+- Sistema de carrito de compras con localStorage
+- Sistema de favoritos persistente
+- Autenticación de usuarios (login/registro)
+- Diseño responsive mobile-first
+- Animaciones y transiciones fluidas
+- Búsqueda de productos en tiempo real
+- Validación de formularios con JavaScript
 
 ---
 
-## 🗂️ Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 CarritoDeCompras/
 │
 ├── index.html                    # Página principal con carrusel
 ├── productos.html                # Catálogo de productos con filtros
-├── carrito.html                  # ⭐ Página del carrito de compras
-├── usuario.html                  # ⭐ Perfil de usuario / Login / Registro
+├── carrito.html                  # Página del carrito de compras
+├── usuario.html                  # Perfil de usuario / Login / Registro
 ├── contacto.html                 # Formulario de contacto
 ├── sobrenosotros.html           # Información de la empresa
 ├── blog.html                     # Artículos del blog
@@ -43,8 +43,8 @@ CarritoDeCompras/
 ├── js/
 │   ├── carousel.js               # Carrusel automático con touch
 │   ├── contact.js                # Validación de formularios
-│   ├── cart.js                   # ⭐ Sistema de carrito con localStorage
-│   ├── favoritos.js              # ⭐ Sistema de favoritos
+│   ├── cart.js                   # Sistema de carrito con localStorage
+│   ├── favoritos.js              # Sistema de favoritos
 │   └── compra.js                 # (Legacy)
   - Email (info@deporshop.com)
 │
@@ -54,9 +54,9 @@ CarritoDeCompras/
 
 ---
 
-## 🎯 Funcionalidades Principales
+## Funcionalidades Principales
 
-### 1. 🏠 **Página de Inicio (index.html)**
+### 1. **Página de Inicio (index.html)**
 - **Hero Section**: Propuesta de valor con llamado a la acción
 - **Carrusel Interactivo Premium**:
   - 8 productos destacados con imágenes de alta calidad
@@ -68,13 +68,13 @@ CarritoDeCompras/
   - Navegación por teclado (←→)
   - Transiciones suaves con `transform`
 - **Grid de Beneficios**: 4 tarjetas destacando:
-  - 🚚 Envío gratis en compras >$50,000
-  - 💳 Pagos 100% seguros
-  - 🔄 Devoluciones gratis en 30 días
-  - ✅ Calidad garantizada
+  - Envío gratis en compras >$50,000
+  - Pagos 100% seguros
+  - Devoluciones gratis en 30 días
+  - Calidad garantizada
 - **Búsqueda Rápida**: Botón que abre prompt y filtra productos
 
-### 2. 🛍️ **Catálogo de Productos (productos.html)**
+### 2. **Catálogo de Productos (productos.html)**
 - **8 Productos Completos**:
   1. Nike Air Max 270 React - $15,999
   2. Adidas Ultraboost 22 - $17,499
@@ -86,20 +86,20 @@ CarritoDeCompras/
   8. Asics Gel-Kayano 29 - $18,999
 
 - **Filtros Avanzados**:
-  - 🔍 Búsqueda por nombre en tiempo real
-  - 📂 Categorías: Running, Training, Casual, Basketball
-  - 🏷️ Marcas: Nike, Adidas, Puma, New Balance, Reebok
-  - 🔢 Ordenamiento: Recientes, Precio menor/mayor, Más vendidos
+  - Búsqueda por nombre en tiempo real
+  - Categorías: Running, Training, Casual, Basketball
+  - Marcas: Nike, Adidas, Puma, New Balance, Reebok
+  - Ordenamiento: Recientes, Precio menor/mayor, Más vendidos
 
 - **Tarjetas de Producto**:
   - Imagen principal con hover zoom
   - Badge de estado (Nuevo, Oferta, Popular, Premium)
-  - Rating con estrellas ⭐
+  - Rating con estrellas
   - Precio formateado en pesos argentinos
-  - Botón "Agregar al Carrito" funcional ✅
-  - Botón "❤️ Favoritos" funcional ✅
+  - Botón "Agregar al Carrito" funcional
+  - Botón "Favoritos" funcional
 
-### 3. 🛒 **Carrito de Compras (carrito.html)** ⭐ NUEVO
+### 3. 🛒 **Carrito de Compras (carrito.html)** NUEVO
 - **Lista de Productos**:
   - Vista detallada de cada producto agregado
   - Miniatura, nombre, categoría y precio unitario
@@ -116,7 +116,7 @@ CarritoDeCompras/
   - Indicador visual de envío gratis alcanzado
 
 - **Estado Vacío**:
-  - Mensaje amigable con ícono 🛒
+  - Mensaje amigable con ícono
   - Botón para ir a ver productos
 
 - **Acciones**:
@@ -124,7 +124,7 @@ CarritoDeCompras/
   - Botón "Seguir Comprando"
   - Botón "Finalizar Compra" (preparado para checkout)
 
-### 4. 👤 **Usuario / Perfil (usuario.html)** ⭐ NUEVO
+### 4. **Usuario / Perfil (usuario.html)** NUEVO
 - **Sistema de Autenticación**:
   - **Login**: Email y contraseña
   - **Registro**: Nombre completo, email, teléfono, contraseña
@@ -142,14 +142,14 @@ CarritoDeCompras/
   - Botón "Cerrar Sesión"
 
 - **Estadísticas Personales**:
-  - 🛒 Productos en el carrito (actualizado en vivo)
-  - ❤️ Productos en favoritos (actualizado en vivo)
+  - Productos en el carrito (actualizado en vivo)
+  - Productos en favoritos (actualizado en vivo)
 
 - **Historial de Compras**:
   - Sección preparada para mostrar pedidos previos
   - Estado vacío con botón "Ver Productos"
 
-### 5. 📝 **Contacto (contacto.html)**
+### 5. **Contacto (contacto.html)**
 - **Formulario Validado**:
   - Nombre completo (requerido)
   - Email con validación regex
@@ -160,15 +160,15 @@ CarritoDeCompras/
   - Mensaje de éxito animado
 
 - **Información de Contacto**:
-  - 📍 Dirección: Av. Corrientes 1234, CABA
-  - 📞 Teléfono: +54 11 1234-5678
-  - 📧 Email: info@deporshop.com
-  - 🕒 Horario: Lun-Vie 9:00-18:00
+  - Dirección: Av. Corrientes 1234, CABA
+  - Teléfono: +54 11 1234-5678
+  - Email: info@deporshop.com
+  - Horario: Lun-Vie 9:00-18:00
 
 - **Mapa de Google Maps** embebido
 - **FAQ Accordion** con 4 preguntas
 
-### 6. 📄 **Páginas Legales y de Ayuda**
+### 6. **Páginas Legales y de Ayuda**
 
 #### **Política de Privacidad (politicadeprivacidad.html)**
 - Cumplimiento con Ley 25.326 de Protección de Datos Personales (Argentina)
@@ -197,11 +197,11 @@ CarritoDeCompras/
 
 #### **Preguntas Frecuentes (preguntasfrecuentes.html)**
 - **13 FAQ organizadas por categorías**:
-  - 🛒 **Compras**: Proceso de compra, métodos de pago
-  - 👟 **Productos**: Autenticidad, tallas, stock
-  - 🚚 **Envíos**: Tiempos, costos, seguimiento
-  - 🔄 **Devoluciones**: Políticas, proceso, costos
-  - 💬 **Soporte**: Contacto, reclamos
+  - **Compras**: Proceso de compra, métodos de pago
+  - **Productos**: Autenticidad, tallas, stock
+  - **Envíos**: Tiempos, costos, seguimiento
+  - **Devoluciones**: Políticas, proceso, costos
+  - **Soporte**: Contacto, reclamos
 
 - **Accordion Interactivo**: Expandir/colapsar preguntas con JavaScript
 
@@ -243,23 +243,23 @@ CarritoDeCompras/
 
 ---
 
-## ⚙️ Sistema Técnico Backend (localStorage)
+## Sistema Técnico Backend (localStorage)
 
 ### Recursos Externos
 - **Google Fonts**: Inter y Caveat
 - **SVG Icons**: Iconos vectoriales inline para mejor rendimiento
 - **Google Maps Embed API**: Mapa de ubicación
 
-## 📱 Compatibilidad
+## Compatibilidad
 
-- ✅ Chrome/Edge (últimas 2 versiones)
-- ✅ Firefox (últimas 2 versiones)
-- ✅ Safari (últimas 2 versiones)
-- ✅ iOS Safari
-- ✅ Chrome Android
-- ✅ Responsive desde 320px hasta 1920px+
+- Chrome/Edge (últimas 2 versiones)
+- Firefox (últimas 2 versiones)
+- Safari (últimas 2 versiones)
+- iOS Safari
+- Chrome Android
+- Responsive desde 320px hasta 1920px+
 
-## 🚀 Próximas Funcionalidades (Backend en desarrollo)
+## Próximas Funcionalidades (Backend en desarrollo)
 
 - Integración con base de datos para productos dinámicos
 - Sistema de carrito de compras funcional
@@ -268,7 +268,7 @@ CarritoDeCompras/
 - Panel de administración
 - API RESTful para gestión de productos
 
-## 📂 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 CarritoDeCompras/
@@ -294,9 +294,9 @@ CarritoDeCompras/
 
 ---
 
-## ⚙️ Sistema Técnico Backend (localStorage)
+## Sistema Técnico Backend (localStorage)
 
-### 🎯 **cart.js - Sistema de Carrito de Compras**
+### **cart.js - Sistema de Carrito de Compras**
 
 Clase `ShoppingCart` completa con 11 métodos:
 
@@ -319,12 +319,12 @@ class ShoppingCart {
 ```
 
 **Características:**
-- ✅ Persistencia automática con `localStorage`
-- ✅ Detección de duplicados (incrementa cantidad en lugar de duplicar)
-- ✅ Cálculo inteligente de envío (gratis >$50k)
-- ✅ Badge actualizado en todas las páginas
-- ✅ Notificaciones toast con animaciones CSS inyectadas
-- ✅ Formato de precios en pesos argentinos (`Intl.NumberFormat`)
+- Persistencia automática con `localStorage`
+- Detección de duplicados (incrementa cantidad en lugar de duplicar)
+- Cálculo inteligente de envío (gratis >$50k)
+- Badge actualizado en todas las páginas
+- Notificaciones toast con animaciones CSS inyectadas
+- Formato de precios en pesos argentinos (`Intl.NumberFormat`)
 
 **Estructura de datos:**
 ```javascript
@@ -348,7 +348,7 @@ window.formatPrice(number) // Helper para formatear $
 
 ---
 
-### ❤️ **favoritos.js - Sistema de Favoritos**
+### **favoritos.js - Sistema de Favoritos**
 
 Clase `Favorites` similar al carrito:
 
@@ -364,17 +364,17 @@ class Favorites {
   remove(productId)          // Elimina un favorito
   clear()                    // Limpia todos los favoritos
   updateFavoriteBadge()      // Actualiza badge en header
-  updateFavoriteButtons()    // Actualiza estado visual de botones ❤️
+  updateFavoriteButtons()    // Actualiza estado visual de botones
   showNotification(msg)      // Toast notification
 }
 ```
 
 **Características:**
-- ✅ Sistema de toggle (click para agregar/quitar)
-- ✅ Estado visual en botones (corazón relleno/vacío)
-- ✅ Persistencia con localStorage
-- ✅ Notificaciones animadas
-- ✅ Actualización automática de UI
+- Sistema de toggle (click para agregar/quitar)
+- Estado visual en botones (corazón relleno/vacío)
+- Persistencia con localStorage
+- Notificaciones animadas
+- Actualización automática de UI
 
 **Estilos CSS dinámicos:**
 ```css
@@ -396,7 +396,7 @@ window.toggleFavorite(product)      // Helper para toggle
 
 ---
 
-### 👤 **Sistema de Usuario (usuario.html + localStorage)**
+### **Sistema de Usuario (usuario.html + localStorage)**
 
 **localStorage key:** `deporshop_user`
 
@@ -406,21 +406,21 @@ window.toggleFavorite(product)      // Helper para toggle
   name: String,       // Nombre completo
   email: String,      // Email único
   phone: String,      // Teléfono (opcional)
-  password: String,   // ⚠️ En producción: hashear con bcrypt
+  password: String,   // En producción: hashear con bcrypt
   createdAt: String   // ISO timestamp
 }
 ```
 
 **Funcionalidades:**
-- ✅ Registro de nuevos usuarios
-- ✅ Login con email/password
-- ✅ Validación de campos requeridos
-- ✅ Perfil con información personal
-- ✅ Estadísticas en vivo (carrito + favoritos)
-- ✅ Cerrar sesión (limpia localStorage)
-- ✅ Botón editar perfil (preparado para expansión)
+- Registro de nuevos usuarios
+- Login con email/password
+- Validación de campos requeridos
+- Perfil con información personal
+- Estadísticas en vivo (carrito + favoritos)
+- Cerrar sesión (limpia localStorage)
+- Botón editar perfil (preparado para expansión)
 
-⚠️ **Nota de seguridad:** Este es un sistema de demostración frontend. En producción:
+**Nota de seguridad:** Este es un sistema de demostración frontend. En producción:
 - Hashear contraseñas con bcrypt
 - Usar JWT tokens
 - Backend con autenticación OAuth
@@ -429,7 +429,7 @@ window.toggleFavorite(product)      // Helper para toggle
 
 ---
 
-## � Design System
+## Design System
 
 ### Variables CSS (50+ custom properties)
 
@@ -520,7 +520,7 @@ window.toggleFavorite(product)      // Helper para toggle
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 ### Frontend
 - **HTML5**: 
@@ -559,7 +559,7 @@ window.toggleFavorite(product)      // Helper para toggle
 
 ---
 
-## 🚀 Cómo Usar el Proyecto
+## Cómo Usar el Proyecto
 
 ### Instalación Local
 
@@ -612,7 +612,7 @@ index.html (Inicio)
 
 ### Gestión de Favoritos
 
-1. Click en ❤️ en cualquier producto
+1. Click en en cualquier producto
 2. Ícono se rellena de color
 3. Ver cantidad en perfil de usuario
 4. Click nuevamente para quitar
@@ -627,31 +627,31 @@ index.html (Inicio)
 
 ---
 
-## 📱 Compatibilidad
+## Compatibilidad
 
 ### Navegadores Soportados
-- ✅ Chrome 90+
-- ✅ Firefox 88+
-- ✅ Safari 14+
-- ✅ Edge 90+
-- ✅ Opera 76+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
+- Opera 76+
 
 ### Dispositivos
-- ✅ **Desktop**: 1920x1080, 1440x900, 1366x768
-- ✅ **Tablet**: iPad, iPad Pro, Surface
-- ✅ **Mobile**: iPhone, Android (360x640+)
+- **Desktop**: 1920x1080, 1440x900, 1366x768
+- **Tablet**: iPad, iPad Pro, Surface
+- **Mobile**: iPhone, Android (360x640+)
 
 ### Features Utilizadas
-- ✅ CSS Grid y Flexbox
-- ✅ CSS Custom Properties
-- ✅ localStorage API
-- ✅ ES6+ JavaScript
-- ✅ Touch Events
-- ✅ Intersection Observer (carrusel)
+- CSS Grid y Flexbox
+- CSS Custom Properties
+- localStorage API
+- ES6+ JavaScript
+- Touch Events
+- Intersection Observer (carrusel)
 
 ---
 
-## 🔧 Personalización
+## Personalización
 
 ### Cambiar Colores
 
@@ -701,7 +701,7 @@ getShipping() {
 
 ---
 
-## 📊 Métricas del Proyecto
+## Métricas del Proyecto
 
 ### Estadísticas de Código
 - **Total líneas**: ~8,000+
@@ -710,19 +710,19 @@ getShipping() {
 - **JavaScript**: 600+ líneas en 5 archivos
 
 ### Componentes Creados
-- 🎨 **50+ componentes CSS** reutilizables
-- 🧩 **20+ secciones HTML** modulares
-- ⚡ **15+ funciones JavaScript** documentadas
+- **50+ componentes CSS** reutilizables
+- **20+ secciones HTML** modulares
+- **15+ funciones JavaScript** documentadas
 
 ### Performance
-- ⚡ **Tiempo de carga**: <1s (sin backend)
-- 🎯 **Lighthouse Score**: 95+ (Performance, Accessibility)
-- 📱 **Mobile-friendly**: 100% responsive
-- ♿ **Accesibilidad**: ARIA labels, alt texts, keyboard navigation
+- **Tiempo de carga**: <1s (sin backend)
+- **Lighthouse Score**: 95+ (Performance, Accessibility)
+- **Mobile-friendly**: 100% responsive
+- **Accesibilidad**: ARIA labels, alt texts, keyboard navigation
 
 ---
 
-## 🐛 Solución de Problemas
+## Solución de Problemas
 
 ### El carrito no guarda productos
 **Solución**: Verificar que el navegador permita localStorage (no modo incógnito).
@@ -741,7 +741,7 @@ getShipping() {
 
 ---
 
-## 🔮 Mejoras Futuras
+## Mejoras Futuras
 
 ### Backend (Próxima Fase)
 - [ ] API REST con Node.js/Express
@@ -768,7 +768,7 @@ getShipping() {
 
 ---
 
-## �🎓 Principios Aplicados
+## Principios Aplicados
 
 ### UX/UI Design Thinking
 - **Empatía**: Diseño centrado en el usuario
@@ -786,23 +786,23 @@ getShipping() {
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
 **Paulo Orsini**
-- 📚 Curso: Front-End JavaScript
-- 🎓 Año: 2024
-- 👥 Comisión: C24225
-- 📍 Ubicación: Buenos Aires, Argentina
+- Curso: Front-End JavaScript
+- Año: 2024
+- Comisión: C24225
+- Ubicación: Buenos Aires, Argentina
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto fue desarrollado con fines educativos como parte del curso de TalentoTech 2024.
 
 ---
 
-## 🙏 Agradecimientos
+## Agradecimientos
 
 - TalentoTech por la formación
 - Comunidad de desarrolladores
@@ -811,7 +811,7 @@ Este proyecto fue desarrollado con fines educativos como parte del curso de Tale
 
 ---
 
-**⭐ ¡Si te gustó el proyecto, no olvides darle una estrella en GitHub!**
+**¡Si te gustó el proyecto, no olvides darle una estrella en GitHub!**
 
 ---
 
